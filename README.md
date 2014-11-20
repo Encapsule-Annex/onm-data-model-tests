@@ -1,4 +1,6 @@
 onm-data-model-validator
 ========================
 
-Object Namespace Manager (onm) data model validator module.
+Generic test suite for inspecting onm data model declarations based on Mocha/Chai.
+
+
