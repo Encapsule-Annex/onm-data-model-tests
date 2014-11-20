@@ -1,14 +1,14 @@
 {
-  "name": "onm-data-model-validator",
-  "version": "0.1.1",
-  "description": "Object Namespace Manager (onm) data model validator module.",
+  "name": "onm-data-model-tests",
+  "version": "0.1.2",
+  "description": "Object Namespace Manager (onm) data model tests module.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec test/test-onm-data-model-validator"
+    "test": "mocha -R spec test/test-onm-data-model-tests"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Encapsule/onm-data-model-validator.git"
+    "url": "git://github.com/Encapsule/onm-data-model-tests.git"
   },
   "keywords": [
     "onm",
@@ -18,9 +18,9 @@
   "author": "ChrisRus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Encapsule/onm-data-model-validator/issues"
+    "url": "https://github.com/Encapsule/onm-data-model-tests/issues"
   },
-  "homepage": "https://github.com/Encapsule/onm-data-model-validator",
+  "homepage": "https://github.com/Encapsule/onm-data-model-tests",
   "devDependencies": {
     "onm": "git://github.com/Encapsule/onm#test/rc/v0.3",
     "grunt-contrib-clean": "^0.6.0",

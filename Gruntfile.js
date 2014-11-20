@@ -1,4 +1,4 @@
-// Encapsule/onm-data-model-validator.js
+// Encapsule/onm-data-model-tests
 
 module.exports = function (grunt_) {
 
@@ -16,7 +16,7 @@ module.exports = function (grunt_) {
         mochaTest: {
             options: { reporter: 'spec', checkLeaks: true },
             src: [
-                'test/test-onm-data-model-validator.js'
+                'test/test-onm-data-model-tests.js'
             ]
         }
     };
