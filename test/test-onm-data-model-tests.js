@@ -1,4 +1,4 @@
-// test-onm-data-model-validator.js
+// test-onm-data-model-tests.js
 //
 
 var packageMeta = require('../package.json');
@@ -34,50 +34,28 @@ describe(packageMeta.name + " v" + packageMeta.version + " test suite.", functio
             assert.isNotNull(thisModuleExports);
         });
 
-        it("This module should export a function.", function() {
-            assert.isFunction(thisModuleExports);
+        it("This module should export an object.", function() {
+            assert.isObject(thisModuleExports);
         });
 
-        describe("Resolve this module's exported function.", function() {
+        it("The object should define property 'validateDataModelDeclaration'.", function() {
+            assert.property(thisModuleExports, 'validateDataModelDeclaration');
+        });
 
-            var validatorExports = null;
-            var initializeValidatorExports = function() {
-                validatorExports = thisModuleExports();
-            };
+        it("The 'validateDataModelDeclaration' property should be a function.", function() {
+            assert.isFunction(thisModuleExports.validateDataModelDeclaration);
+        });
 
-            before(function() {
-                assert.doesNotThrow(initializeValidatorExports);
+        describe("Invoke the 'validateDataModelDeclaration' function to validate the address boook data model.", function() {
+
+            before(function(done_) {
+                thisModuleExports.validateDataModelDeclaration(addressBookDataModelDeclaration);
+                done_();
             });
 
-            it("Calling this module's exported function with no parameters should return a defined/non-null value.", function() {
-                assert.isDefined(validatorExports);
-                assert.isNotNull(validatorExports);
+            it("Execute the dynamic test suite.", function() {
+                assert.isTrue(true);
             });
-
-            it("The value should be an object.", function() {
-                assert.isObject(validatorExports);
-            });
-
-            it("The object should define property 'validateDataModelDeclaration'.", function() {
-                assert.property(validatorExports, 'validateDataModelDeclaration');
-            });
-
-            it("The 'validateDataModelDeclaration' property should be a function.", function() {
-                assert.isFunction(validatorExports.validateDataModelDeclaration);
-            });
-
-            describe("Invoke the 'validateDataModelDeclaration' function to validate the address boook data model.", function() {
-
-                before(function(done_) {
-                    validatorExports.validateDataModelDeclaration(addressBookDataModelDeclaration);
-                    done_();
-                });
-
-                it("Execute the dynamic test suite.", function() {
-                    assert.isTrue(true);
-                });
-            });
-
         });
 
     });
