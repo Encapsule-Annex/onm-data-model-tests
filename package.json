@@ -1,6 +1,6 @@
 {
   "name": "onm-data-model-tests",
-  "version": "0.3.23",
+  "version": "1.0.0",
   "description": "Object Namespace Manager (onm) v0.3 data model declaration test module.",
   "main": "index.js",
   "scripts": {
